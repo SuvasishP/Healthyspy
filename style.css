@@ -1,0 +1,169 @@
+/* Smooth transition for background color changes */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    transition: background 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Dark Mode Support */
+.dark-mode {
+    background: #121212 !important;
+    color: #ffffff;
+}
+
+.dark-mode .form-container,
+.dark-mode .result-container {
+    background: #333;
+    color: white;
+}
+
+.dark-mode button {
+    background: #ff204b;
+}
+
+.dark-mode button:hover {
+    background: #ff477e;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Animated Heartbeat Health Icon */
+.health-icon {
+    font-size: 40px;
+    margin: 10px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Buttons with Bounce Hover Effect */
+button {
+    background: #ff477e;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: #ff204b;
+    transform: scale(1.1);
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    background: #222;
+    color: white;
+    border-radius: 10px;
+}
+
+#darkModeToggle:hover {
+    background: #444;
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Fields */
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #ff477e;
+    outline: none;
+}
+
+/* Move Calculate Button Down */
+.form-container button {
+    margin-top: 20px;
+    width: 85%;
+    padding: 12px;
+}
+
+/* Voice Assistant Button */
+#speakBtn {
+    background: #0084ff;
+}
+
+#speakBtn:hover {
+    background: #0056b3;
+}
+
+/* BMI Result Pop-in Effect */
+.result-container {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Slide-in Effect for Food Recommendations */
+#foodData {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Modal (Login/Signup) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}

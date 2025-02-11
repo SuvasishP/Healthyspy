@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 font color="black">HEALTHSPY➕</h1> <!-- This will update dynamically after login -->
+        <div class="health-icon">❤️</div>  
+    <nav>
+        <button id="loginBtn">Login</button>
+        <button id="signupBtn">Sign Up</button>
+        <button id="logoutBtn" style="display: none;">Logout</button>
+        <button id="darkModeToggle">🌙 Dark Mode</button> <!-- Toggle Button -->
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Check Your BMI & Get Health Tips</h2>
+            <input type="number" id="age" placeholder="Enter Age">
+            <input type="number" id="height" placeholder="Enter Height (cm)">
+            <input type="number" id="weight" placeholder="Enter Weight (kg)">
+            <button onclick="calculateBMI()">Calculate</button>
+            <button id="speakBtn">🔊 Read Health Tips</button> <!-- Voice Assistant -->
+        </section>
+
+        <section id="result" class="result-container">
+            <h3>Your BMI: <span id="bmiValue">-</span></h3>
+            <p id="bmiCategory"></p>
+            <h3>Nutrition & Healthcare Tips</h3>
+            <p id="healthTips"></p>
+        </section>
+
+        <section id="result" class="result-container">
+            <h3>Your BMI: <span id="bmiValue">-</span></h3>
+            <p id="bmiCategory"></p>
+            <h3>Nutrition & Healthcare Tips</h3>
+            <p id="healthTips"></p>
+            <div id="foodData"></div> <!-- Food recommendations will be displayed here -->
+        </section>
+    </main>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="authTitle">Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="authSubmit">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
