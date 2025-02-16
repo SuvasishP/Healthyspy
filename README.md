@@ -24,3 +24,5 @@
 - **GitHub Pages for Hosting** 🚀
 
 ---
+To access the website :- healthspy69.netlify.app
+Feel free to checkout this app
